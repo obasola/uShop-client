@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { Person } from 'components/models';
+import { Person } from 'src/types/modelsjs';
 import PersonComponent from 'components/PersonComponent.vue';
 import { ref } from 'vue';
 </script>

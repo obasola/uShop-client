@@ -3,7 +3,7 @@ export interface Todo {
   content: string;
 }
 
-export interface Coupon{
+export interface Coupon {
   id: number;
   name: string;
   barcode: string;
@@ -18,24 +18,24 @@ export interface Store {
   zipcode: string;
   phone: string;
 }
-export interface Item{
-    id: number;
-    item: string;
-    recurring: string
-    date_recorded; string
-    price: number;
-    aisle: string;
-    barcode: string;
-    store_id: number;
-    coupon_id: string;
-    person_id: number;
+export interface Item {
+  id: number;
+  item: string;
+  recurring: string;
+  date_recorded: string;
+  price: number;
+  aisle: string;
+  barcode: string;
+  store_id: number;
+  coupon_id: string;
+  person_id: number;
 }
 
 export interface Person {
   id: number;
-  email: string;
-  password: string;
   firstName: string;
   lastName: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
 }
-
