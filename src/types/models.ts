@@ -1,15 +1,15 @@
-export interface Todo {
+export default interface Todo {
   id: number;
   content: string;
 }
 
-export interface Coupon {
+export default interface Coupon {
   id: number;
   name: string;
   barcode: string;
   discount: number;
 }
-export interface Store {
+export default interface Store {
   id: number;
   name: string;
   address: string;
@@ -18,7 +18,7 @@ export interface Store {
   zipcode: string;
   phone: string;
 }
-export interface Item {
+export default interface Item {
   id: number;
   item: string;
   recurring: string;
@@ -26,12 +26,13 @@ export interface Item {
   price: number;
   aisle: string;
   barcode: string;
+  checked: boolean;
   store_id: number;
   coupon_id: string;
   person_id: number;
 }
 
-export interface Person {
+export default interface Person {
   id: number;
   firstName: string;
   lastName: string;

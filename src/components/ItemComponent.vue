@@ -37,6 +37,10 @@
 </template>
 
 <script setup lang="ts">
+import Item from '../types/models';
+import { reactive } from 'vue';
+
+const item:Item = reactive(Item);
 
 </script>
 
