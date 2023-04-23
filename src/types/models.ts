@@ -21,6 +21,8 @@ export default interface Store {
 export default interface Item {
   id: number;
   item: string;
+  qty: number;
+  per_item_price: number;
   recurring: string;
   date_recorded: string;
   price: number;
@@ -28,7 +30,7 @@ export default interface Item {
   barcode: string;
   checked: boolean;
   store_id: number;
-  coupon_id: string;
+  coupon_id: number;
   person_id: number;
 }
 

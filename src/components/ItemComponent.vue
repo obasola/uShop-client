@@ -1,9 +1,7 @@
 <template>
     <div class="q-pa-md" style="max-width: 400px">
 
-    <q-form
-      @submit="onSubmit"
-      @reset="onReset"
+    <q-form onsubmit=".preventSubmit()"
       class="q-gutter-md"
     >
       <q-input
@@ -30,8 +28,8 @@
       <q-toggle v-model="accept" label="I accept the license and terms" />
 
       <div>
-        <q-btn label="Submit" type="submit" color="primary"/>
-        <q-btn label="Reset" type="reset" color="primary" flat class="q-ml-sm" />
+        <q-btn label="Submit" v-on:click="onSubmit" color="primary"/>
+        <q-btn label="Reset"  v-on:click="onReset" type="reset" color="primary" flat class="q-ml-sm" />
       </div>
     </q-form>
 </template>
@@ -42,6 +40,12 @@ import { reactive } from 'vue';
 
 const item:Item = reactive(Item);
 
+function onSubmit() {
+  console.log("Submit clicked");
+}
+function onReset() {
+  console.log("Reset clicked");
+}
 </script>
 
 <style lang="css" scoped>
